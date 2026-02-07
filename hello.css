@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    background-color: #feeeee;
+}
+.whole{
+    flex: 1;
+}
+.section{
+    margin-top: 200px;
+    position: fixed;
+    left: 50px;
+    width: 100px;
+}
+.content {
+    flex: 1;
+    display: grid;
+    gap: 29px;
+    color: black;
+}
+.content a{
+    font-size: 15px;
+    font: bold;
+    font-family: serif;
+    text-decoration: none;
+    color: black;
+}
+.page{
+    display: flex;
+    padding: 40px;
+}
+.email{
+    position: fixed;
+    top: 25px;
+    left: 15%;
+}
+.email a{
+    color: rgb(240, 115, 70);
+    text-decoration: none;
+    width: 100%;
+    padding: 15px;
+}
+.email i{
+    font-size: 24px;
+    color: #00000000;
+}
+.photos{
+    flex: 1;
+    margin-top: 100px;
+}
