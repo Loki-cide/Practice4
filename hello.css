@@ -1,9 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     background-color: #feeeee;
 }
 .whole{
-    flex: 1;
+    display: flex;
+    margin-right: auto;
 }
 .section{
     margin-top: 200px;
@@ -23,27 +27,80 @@ body{
     font-family: serif;
     text-decoration: none;
     color: black;
+    transition: text-decoration-color 0.3s ease;
+}
+.content a:hover{
+    text-decoration: underline;
+    text-decoration-color: brown;
+    color: brown;
 }
 .page{
-    display: flex;
+    margin-left: 200px;
     padding: 40px;
 }
 .email{
+    display: flex;
     position: fixed;
-    top: 25px;
-    left: 15%;
+    background-color: #feeeee;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding-left: 15%;
+    margin-bottom: 3px solid;
+}
+.email::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;    
+    left: 14%;                  
+    width: 62%;               
+    height: 1px;
+    background-color: gray;    
 }
 .email a{
     color: rgb(240, 115, 70);
     text-decoration: none;
-    width: 100%;
     padding: 15px;
+    left: 25px;
 }
 .email i{
     font-size: 24px;
     color: #00000000;
 }
-.photos{
-    flex: 1;
-    margin-top: 100px;
+.photos {
+    display: flex;
+    gap: 90px;
+    flex-wrap: wrap;
+    margin-top: 80px;
 }
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s ease;
+}
+.photo-card img {
+    height: auto;
+    object-fit: cover;
+    width: 300px;
+    border-radius: 16px;
+    transition: transform 0.4s ease;
+}
+.photo-card .caption {
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    color: #333;
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+.photo-card:hover {
+    transform: scale(1.05);
+}
+.photo-card:hover img {
+    border-radius: 0;
+}
+
+
+
