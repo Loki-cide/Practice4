@@ -12,8 +12,8 @@ body{
 .section{
     margin-top: 200px;
     position: fixed;
-    left: 50px;
-    width: 100px;
+    left: 40px;
+    width: 150px;
 }
 .content {
     display: grid;
@@ -21,11 +21,11 @@ body{
     color: black;
 }
 .content a{
-    font-size: 15px;
-    font: bold;
+    font-size: 16px;
     font-family: serif;
     text-decoration: none;
     color: black;
+    letter-spacing: 0.5px;
     transition: text-decoration-color 0.3s ease;
 }
 .content a:hover{
@@ -40,6 +40,9 @@ body{
     text-align: center;
     text-decoration: none;
     transition: transform 0.3s ease;
+}
+.social a i{
+    margin-right: 8px;
 }
 .social a:hover {
     transform: scale(1.3)
@@ -57,7 +60,6 @@ body{
     width: 100%;
     z-index: 1;
     padding-left: 15%;
-    margin-bottom: 3px solid;
 }
 .email::after{
     content: "";
@@ -88,6 +90,7 @@ body{
     width: 100%;
     font-size: 40px;
     font-weight: bold;
+    font-family: serif;
     transition: transform 0.2s ease;
     color: rgb(240, 115, 70);
 }
@@ -96,20 +99,35 @@ body{
     text-decoration-color: rgb(247, 157, 125);
 }
 .photo-card {
+    display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.4s ease;
 }
 .photo-card img {
+    width:100%;
+    max-width:300px;
     height: auto;
     object-fit: cover;
-    width: 300px;
     border-radius: 16px;
+    animation: fadein linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
-.photo-card .caption {
+@keyframes fadein {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.photo-card .caption p{
     margin-top: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 15px;
+    font-size: 10px;
     color: #333;
     text-align: center;
 }
@@ -126,9 +144,9 @@ body{
     background: white;
     padding: 40px;
     border-radius: 20px;
-    width: 400px;
+    width: 420px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
     transition: transform 0.3s ease;
 }
 .profile:hover{
@@ -141,9 +159,23 @@ body{
     border-radius: 50%;
     margin-bottom: 20px;
     border: 4px solid #feeeee;
+    animation: fadein linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes fadein {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }
 .profile h2 {
     margin: 10px 0;
+    font-size: 28px;
     font-family: serif;
 }
 .profile p {
