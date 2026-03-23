@@ -5,10 +5,6 @@ body{
     margin: 0;
     background-color: #feeeee;
 }
-.whole{
-    display: flex;
-    margin-right: auto;
-}
 .section{
     margin-top: 200px;
     position: fixed;
@@ -104,6 +100,9 @@ body{
     align-items: center;
     transition: transform 0.4s ease;
 }
+.photo-card:hover {
+    transform: scale(1.07);
+}
 .photo-card img {
     width:100%;
     max-width:300px;
@@ -131,9 +130,6 @@ body{
     color: #333;
     text-align: center;
 }
-.photo-card:hover {
-    transform: scale(1.07);
-}
 .information{
     display: flex;
     margin-top: 120px;
@@ -159,7 +155,6 @@ body{
     border-radius: 50%;
     margin-bottom: 20px;
     border: 4px solid #feeeee;
-    animation: fadein linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
